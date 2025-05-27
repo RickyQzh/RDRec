@@ -1,4 +1,4 @@
-# Whats New? 
+# Whats New? (NLP 25'Spring)
 ## Instruction
 ### 1. How to use a Multi-GPU device (NLP lecture project)
 #### 1.1. set device number when testing
@@ -8,10 +8,26 @@
 #### 1.2. Pretrain the RDRec-New
         >> nohup python pretrain.py --data_dir ./data/beauty/ --cuda --batch_size 64 --checkpoint ./checkpoint/beauty/ --ratio 1:1:1:3 > pretrain.log 2>&1 &
 
+### 2. How to replace the llama 2 model with other LLMs (RDRec-New)?
+
+#### 2.1. 
+
 ## RDRec+CNN
 
 ## RDRec+Qwen3-14B
 
+
+## Results
+
+#### 1. Replication Results (./Results_0508_RDRec)
+
+
+#### 2. RDRec+CNN
+
+#### 2. RDRec+Qwen3-14B
+
+#### 4. RDRec+CNN+Qwen3-14B
+ 
 ---
 
 # RDRec (ACL'24)
