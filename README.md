@@ -1,3 +1,19 @@
+# Whats New? 
+## Instruction
+### 1. How to use a Multi-GPU device (NLP lecture project)
+#### 1.1. set device number when testing
+        >> CUDA_VISIBLE_DEVICES=4 nohup python seq.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > seq.log 2>&1 &
+        >> CUDA_VISIBLE_DEVICES=5 nohup python topn.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > topn.log 2>&1 &
+        >> CUDA_VISIBLE_DEVICES=6 nohup python exp.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > exp.log 2>&1 &
+#### 1.2. Pretrain the RDRec-New
+        >> nohup python pretrain.py --data_dir ./data/beauty/ --cuda --batch_size 64 --checkpoint ./checkpoint/beauty/ --ratio 1:1:1:3 > pretrain.log 2>&1 &
+
+## RDRec+CNN
+
+## RDRec+Qwen3-14B
+
+---
+
 # RDRec (ACL'24)
 
 ## Paper - [[ArXiv]](https://arxiv.org/pdf/2405.10587) [[ACL Anthology]](https://aclanthology.org/2024.acl-short.6/)
@@ -47,16 +63,6 @@
 - All experiments, including rationale distillation, can be conducted on a **<u>single Nvidia GeForce RTX 3090 (24GB memory)</u>**. Reduce the batch size if you encounter an OOM error on some dataset.
 - There are some fluctuations in RDRec's results for sequential recommendations. We reported average results in 10-trial runs in the paper  (See [t_test.py](https://github.com/WangXFng/RDRec/blob/main/utils/t_test.py) for more details). If the results are not ideal, please pre-train the model once again. 
 - If you have any questions, please feel free to contact me at kaysenn@163.com.
-
-## Training on LWB's Service
-### set device number
-        >> CUDA_VISIBLE_DEVICES=3 python xxx
-
-        >> CUDA_VISIBLE_DEVICES=4 nohup python seq.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > pretrain_beauty_3.log 2>&1 &
-        >> CUDA_VISIBLE_DEVICES=5 nohup python topn.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > pretrain_beauty_3.log 2>&1 &
-        >> CUDA_VISIBLE_DEVICES=6 nohup python exp.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > pretrain_beauty_3.log 2>&1 &
-### RDRecNew
-        >> nohup python pretrain.py --data_dir ./data/beauty/ --cuda --batch_size 64 --checkpoint ./checkpoint/beauty/ --ratio 1:1:1:3 > pretrain_beauty_3.log 2>&1 &
 
 
 ## Citation
