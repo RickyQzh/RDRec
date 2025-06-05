@@ -1,32 +1,36 @@
 # Whats New? (NLP 25'Spring)
-## Instruction
-### 1. How to use a Multi-GPU device (NLP lecture project)
-#### 1.1. set device number when testing
+## 1. Instruction
+### 1.1 How to use a Multi-GPU device (NLP lecture project)
+#### (a) set device number when testing
         >> CUDA_VISIBLE_DEVICES=4 nohup python seq.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > seq.log 2>&1 &
         >> CUDA_VISIBLE_DEVICES=5 nohup python topn.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > topn.log 2>&1 &
         >> CUDA_VISIBLE_DEVICES=6 nohup python exp.py --data_dir ./data/{dataset}/ --cuda --batch_size 32 --checkpoint ./checkpoint/{dataset}/ > exp.log 2>&1 &
-#### 1.2. Pretrain the RDRec-New
+#### (b) Pretrain the RDRec-New
         >> nohup python pretrain.py --data_dir ./data/beauty/ --cuda --batch_size 64 --checkpoint ./checkpoint/beauty/ --ratio 1:1:1:3 > pretrain.log 2>&1 &
 
-### 2. How to replace the llama 2 model with other LLMs (RDRec-New)?
+### 1.2. How to replace the llama 2 model with other LLMs (RDRec-New)?
 
-#### 2.1. 
+#### (a) 
 
-## RDRec+CNN
+#### (b) 
 
-## RDRec+Qwen3-14B
+## 2. Method 
+###  2.1. Short-range Attention Module with CNN
+
+###  2.2. Qwen3：Improvement of the Base Model
+
+###  2.3. Two-stage Distillation
 
 
-## Results
+## 3. Results
 
-#### 1. Replication Results (./Results_0508_RDRec)
+(a) Replication Results (./Results_0508_RDRec)
 
+(b) RDRec+CNN (./Results_0514_RDRec+CNN_0.2)
 
-#### 2. RDRec+CNN
+(c) RDRec+Qwen3-14B (./Results_0522_RDRec+Qwen)
 
-#### 2. RDRec+Qwen3-14B
-
-#### 4. RDRec+CNN+Qwen3-14B
+(d) RDRec+CNN+Qwen3-14B (./Results_0520_RDRec+CNN+Qwen_max)
  
 ---
 
