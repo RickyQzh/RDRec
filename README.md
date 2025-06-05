@@ -21,9 +21,14 @@ replace ```./model/module.py``` with  ```./model/module_CNN.py```
 
 ###  2.2. Qwen3：Improvement of the Base Model
 
+replace ```./data``` with ```./data_qwen_distillation```
+
 ###  2.3. Two-stage Distillation
 
-
+- replace ```./pretrain.py``` with ```./pretrain.py_2stage```
+- replace ```./model/templates.py``` with ```./model/templates_2stage.py```
+- replace ```./utils/utils.py``` with ```./utils/utils_2stage.py```
+ 
 ## 3. Results
 
 (a) Replication Results (```./Results_0508_RDRec```)
