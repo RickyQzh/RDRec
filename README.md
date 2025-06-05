@@ -8,7 +8,7 @@
 #### (b) Pretrain the RDRec-New
         >> nohup python pretrain.py --data_dir ./data/beauty/ --cuda --batch_size 64 --checkpoint ./checkpoint/beauty/ --ratio 1:1:1:3 > pretrain.log 2>&1 &
 
-### 1.2. How to replace the llama 2 model with other LLMs (RDRec-New)?
+### 1.2. How to replace the llama2 model with other LLMs (RDRec-New)?
 
 #### (a) 
 
@@ -17,6 +17,8 @@
 ## 2. Method 
 ###  2.1. Short-range Attention Module with CNN
 
+replace ```./model/module.py``` with  ```./model/module_CNN.py```
+
 ###  2.2. Qwen3：Improvement of the Base Model
 
 ###  2.3. Two-stage Distillation
@@ -24,13 +26,13 @@
 
 ## 3. Results
 
-(a) Replication Results (./Results_0508_RDRec)
+(a) Replication Results (```./Results_0508_RDRec```)
 
-(b) RDRec+CNN (./Results_0514_RDRec+CNN_0.2)
+(b) RDRec+CNN (```./Results_0514_RDRec+CNN_0.2```)
 
-(c) RDRec+Qwen3-14B (./Results_0522_RDRec+Qwen)
+(c) RDRec+Qwen3-14B (```./Results_0522_RDRec+Qwen```)
 
-(d) RDRec+CNN+Qwen3-14B (./Results_0520_RDRec+CNN+Qwen_max)
+(d) RDRec+CNN+Qwen3-14B (```./Results_0520_RDRec+CNN+Qwen_max```)
  
 ---
 
