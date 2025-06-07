@@ -9,11 +9,19 @@
         >> nohup python pretrain.py --data_dir ./data/beauty/ --cuda --batch_size 64 --checkpoint ./checkpoint/beauty/ --ratio 1:1:1:3 > pretrain.log 2>&1 &
 
 ### 1.2. How to replace the llama2 model with other LLMs (RDRec-New)?
+You can replace llama2 with other models in Stage1:Intersection Rationale Distillation(we use Qwen3-14B-AWQ) and you can get it easily by using our `./data_qwen_distillation/qwen_distillation.py`scripts.
 
-#### (a) 
+You need to download a Qwen model(or other model) from a source like `ModelScope` or `Hugging Face` beforehand.Then replace `{your_path}` with your local model path,replace `{input_path}{output_path}` according to your local file.
 
-#### (b) 
-
+```
+	>> cd data_qwen_distillation
+	>> python qwen_distillation.py \
+		--model_path={your_model_path} \
+		--input_json_path={input_path} \
+		--output_json_path={output_path} \
+		--max_batch_size=32 \
+		-- save_every_n_batches=50
+```
 ## 2. Method 
 ###  2.1. Short-range Attention Module with CNN
 
